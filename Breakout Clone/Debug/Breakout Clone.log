@@ -1,0 +1,19 @@
+﻿Build started 12/22/2014 9:23:08 PM.
+     1>Project "C:\Users\GEMISIS\Documents\GitHub\Breakout Clone\Breakout Clone\Breakout Clone.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt wall.cpp
+         wall.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\GEMISIS\Documents\GitHub\Breakout Clone\Debug\Breakout Clone.exe" /INCREMENTAL /NOLOGO "sfml-main-d.lib" "sfml-system-d.lib" "sfml-graphics-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\GEMISIS\Documents\GitHub\Breakout Clone\Debug\Breakout Clone.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\GEMISIS\Documents\GitHub\Breakout Clone\Debug\Breakout Clone.lib" /MACHINE:X86 Debug\ball.obj
+         Debug\main.obj
+         Debug\main_menu.obj
+         Debug\main_game.obj
+         Debug\paddle.obj
+         Debug\score_system.obj
+         Debug\wall.obj
+         Breakout Clone.vcxproj -> C:\Users\GEMISIS\Documents\GitHub\Breakout Clone\Debug\Breakout Clone.exe
+     1>Done Building Project "C:\Users\GEMISIS\Documents\GitHub\Breakout Clone\Breakout Clone\Breakout Clone.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.55
