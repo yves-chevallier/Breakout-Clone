@@ -1,6 +1,6 @@
 #include "wall.hpp"
 
-Wall::Wall(Paddle* paddle, Ball* ball, sf::RenderWindow* window)
+Wall::Wall(Paddle *paddle, Ball *ball, sf::RenderWindow *window)
 {
 	this->ball = ball;
 	this->paddle = paddle;
@@ -22,12 +22,12 @@ Wall::Wall(Paddle* paddle, Ball* ball, sf::RenderWindow* window)
 	this->Reset(window);
 }
 
-void Wall::Reset(sf::RenderWindow* window)
+void Wall::Reset(sf::RenderWindow *window)
 {
 	active = true;
 }
 
-bool Wall::Update(sf::RenderWindow* window)
+bool Wall::Update(sf::RenderWindow *window)
 {
 	if (this->ball && this->paddle && active)
 	{

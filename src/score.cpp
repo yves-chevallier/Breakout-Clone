@@ -6,13 +6,13 @@ Score::Score()
 	this->walls = std::vector<Wall>();
 }
 
-void Score::addWall(Paddle* paddle, Ball* ball, sf::RenderWindow* window, float x, float y)
+void Score::addWall(Paddle *paddle, Ball *ball, sf::RenderWindow *window, float x, float y)
 {
 	this->walls.push_back(Wall(paddle, ball, window));
 	this->walls[this->walls.size() - 1].setPosition(x, y);
 }
 
-void Score::Update(sf::RenderWindow* window)
+void Score::Update(sf::RenderWindow *window)
 {
 	for (int i = 0; i < this->walls.size(); i += 1)
 	{
@@ -23,7 +23,7 @@ void Score::Update(sf::RenderWindow* window)
 	}
 }
 
-void Score::Render(sf::RenderWindow* window)
+void Score::Render(sf::RenderWindow *window)
 {
 	for (int i = 0; i < this->walls.size(); i += 1)
 	{

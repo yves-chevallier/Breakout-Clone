@@ -11,12 +11,13 @@ public:
 	Wall()
 	{
 	}
-	Wall(Paddle* paddle, Ball* ball, sf::RenderWindow* window);
-	void Reset(sf::RenderWindow* window);
-	bool Update(sf::RenderWindow* window);
+	Wall(Paddle *paddle, Ball *ball, sf::RenderWindow *window);
+	void Reset(sf::RenderWindow *window);
+	bool Update(sf::RenderWindow *window);
+
 private:
-	Ball* ball;
-	Paddle* paddle;
+	Ball *ball;
+	Paddle *paddle;
 
 	int specialness;
 };

@@ -1,11 +1,11 @@
 #include "paddle.hpp"
 
-Paddle::Paddle(sf::RenderWindow* window)
+Paddle::Paddle(sf::RenderWindow *window)
 {
-	this->speed = 1;
+	this->speed = 4;
 	this->Load("assets/paddle.png");
 	this->setPosition(
-		window->getSize().x / 2 - this->getTextureRect().width / 2.0, 
+		window->getSize().x / 2 - this->getTextureRect().width / 2.0,
 		window->getSize().y - this->getTextureRect().height * 0.5);
 }
 

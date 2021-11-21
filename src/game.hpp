@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-#include "game_state.hpp"
+#include "state.hpp"
 #include "entity.hpp"
 
 #include "paddle.hpp"

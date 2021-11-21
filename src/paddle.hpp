@@ -8,7 +8,6 @@ public:
 	float speed;
 
 	Paddle() {}
-	Paddle(sf::RenderWindow* window);
+	Paddle(sf::RenderWindow *window);
 	void Update();
-private:
 };

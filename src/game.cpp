@@ -5,7 +5,7 @@ Game::Game()
 {
 }
 
-void Game::Initialize(sf::RenderWindow* window)
+void Game::Initialize(sf::RenderWindow *window)
 {
 	font = new sf::Font();
 	font->loadFromFile("assets/collegiate.ttf");
@@ -18,15 +18,15 @@ void Game::Initialize(sf::RenderWindow* window)
 
 	score = Score();
 
-	for (int y = 0; y < 10; y += 1)
+	for (int y = 0; y < 15; y += 1)
 	{
-		for (int x = 0; x < 17; x += 1)
+		for (int x = 0; x < 28; x += 1)
 		{
 			score.addWall(&paddle, &ball, window, x * 40 + 50, y * 24 + 50);
 		}
 	}
 }
-void Game::Update(sf::RenderWindow* window)
+void Game::Update(sf::RenderWindow *window)
 {
 	if (!ball.Update(window))
 	{
@@ -39,10 +39,10 @@ void Game::Update(sf::RenderWindow* window)
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
 	{
-		coreState->SetState(new main_menu());
+		coreState->SetState(new Menu());
 	}
 }
-void Game::Render(sf::RenderWindow* window)
+void Game::Render(sf::RenderWindow *window)
 {
 	window->draw(this->ball);
 	window->draw(this->paddle);
@@ -50,6 +50,6 @@ void Game::Render(sf::RenderWindow* window)
 
 	window->draw(*header);
 }
-void Game::Destroy(sf::RenderWindow* window)
+void Game::Destroy(sf::RenderWindow *window)
 {
 }

@@ -6,33 +6,33 @@
 class tiny_state
 {
 public:
-	virtual void Initialize(sf::RenderWindow* window)
+	virtual void Initialize(sf::RenderWindow *window)
 	{
 	}
-	virtual void Update(sf::RenderWindow* window)
+	virtual void Update(sf::RenderWindow *window)
 	{
 	}
-	virtual void Render(sf::RenderWindow* window)
+	virtual void Render(sf::RenderWindow *window)
 	{
 	}
-	virtual void Destroy(sf::RenderWindow* window)
+	virtual void Destroy(sf::RenderWindow *window)
 	{
 	}
 };
 
-class game_state
+class GameState
 {
 public:
-	game_state()
+	GameState()
 	{
 	}
 
-	void SetWindow(sf::RenderWindow* window)
+	void SetWindow(sf::RenderWindow *window)
 	{
 		this->window = window;
 	}
 
-	void SetState(tiny_state* newState)
+	void SetState(tiny_state *newState)
 	{
 		if (this->state != NULL)
 		{
@@ -57,17 +57,18 @@ public:
 		this->state->Render(window);
 	}
 
-	~game_state()
+	~GameState()
 	{
 		if (this->state != NULL)
 		{
 			this->state->Destroy(window);
 		}
 	}
+
 private:
-	sf::RenderWindow* window;
-	tiny_state* state;
+	sf::RenderWindow *window;
+	tiny_state *state;
 };
 
-extern game_state* coreState;
+extern GameState *coreState;
 extern bool endGame;

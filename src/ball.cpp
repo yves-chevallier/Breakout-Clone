@@ -22,12 +22,14 @@ void Ball::Bounce(bool bounceY)
 
 void Ball::Reset(sf::RenderWindow* window)
 {
-	this->velocity = sf::Vector2f(0.75f, -0.75f);
+	this->velocity = sf::Vector2f(1., -1.);
 	this->setPosition(window->getSize().x / 2 - this->getTextureRect().width / 2.0f, window->getSize().y - this->getTextureRect().height * 4.0f);
 }
 
 bool Ball::Update(sf::RenderWindow* window)
 {
+	//this->rotate(0.1f);
+
 	if (this->paddle)
 	{
 		if (this->paddle->Collision(this))

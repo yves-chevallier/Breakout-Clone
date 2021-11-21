@@ -1,21 +1,20 @@
 #include <chrono>
 #include <thread>
 #include <SFML/Window.hpp>
-//#include <Windows.h>
+#include <SFML/Graphics/Color.hpp>
 
 #include "menu.hpp"
 
 bool endGame = false;
-game_state* coreState;
+GameState* coreState;
 
 int main()
 {
-	srand(NULL);
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Breakout");
+	sf::RenderWindow window(sf::VideoMode(1200, 800), "Breakout");
 
-	coreState = new game_state();
+	coreState = new GameState();
 	coreState->SetWindow(&window);
-	coreState->SetState(new main_menu());
+	coreState->SetState(new Menu());
 
 	while (window.isOpen())
 	{
@@ -30,13 +29,13 @@ int main()
 				window.close();
 		}
 
-		window.clear(sf::Color::Black);
+		window.clear(sf::Color(40, 44, 52));
 
 		coreState->Update();
 		coreState->Render();
 
 		window.display();
 
-		std::this_thread::sleep_for(std::chrono::milliseconds(10));
+		//std::this_thread::sleep_for(std::chrono::milliseconds(3));
 	}
 }

@@ -1,10 +1,9 @@
 #include "menu.hpp"
 
-void main_menu::Initialize(sf::RenderWindow* window)
+void Menu::Initialize(sf::RenderWindow *window)
 {
 	font = new sf::Font();
 	font->loadFromFile("assets/collegiate.ttf");
-
 
 	header = new sf::Text("Breakout\nClone", *font, 128U);
 	header->setPosition(30, 0);
@@ -35,7 +34,8 @@ void main_menu::Initialize(sf::RenderWindow* window)
 		score.addWall(NULL, &ball, window, x, y);
 	}
 }
-void main_menu::Update(sf::RenderWindow* window)
+
+void Menu::Update(sf::RenderWindow *window)
 {
 	ball.Update(window);
 	score.Update(window);
@@ -107,7 +107,7 @@ void main_menu::Update(sf::RenderWindow* window)
 		}
 	}
 }
-void main_menu::Render(sf::RenderWindow* window)
+void Menu::Render(sf::RenderWindow *window)
 {
 	window->draw(ball);
 	score.Render(window);
@@ -115,6 +115,6 @@ void main_menu::Render(sf::RenderWindow* window)
 	window->draw(*play);
 	window->draw(*quit);
 }
-void main_menu::Destroy(sf::RenderWindow* window)
+void Menu::Destroy(sf::RenderWindow *window)
 {
 }
